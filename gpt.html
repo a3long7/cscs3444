@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Math Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #ffcc00;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+        color: #333;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .sample {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+
+    .exercise {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="number"] {
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <h1>Math for Kids</h1>
+</header>
+<div class="container">
+    <section class="sample">
+        <h2>Sample</h2>
+        <p>Here's a simple math problem for you to try:</p>
+        <p>What is 2 + 2?</p>
+        <p>Answer: <span id="sampleAnswer">4</span></p>
+    </section>
+    <section class="exercise">
+        <h2>Exercise</h2>
+        <form id="exerciseForm">
+            <label for="exerciseAnswer">What is 5 + 3?</label>
+            <input type="number" id="exerciseAnswer" name="exerciseAnswer">
+            <button type="button" onclick="checkAnswer()">Submit</button>
+        </form>
+        <p id="exerciseResult"></p>
+    </section>
+</div>
+<footer>
+    <p>&copy; 2024 Math for Kids</p>
+</footer>
+<script>
+    function checkAnswer() {
+        var answer = document.getElementById("exerciseAnswer").value;
+        if (answer == 8) {
+            document.getElementById("exerciseResult").textContent = "Correct!";
+        } else {
+            document.getElementById("exerciseResult").textContent = "Try again!";
+        }
+    }
+</script>
+</body>
+</html>
